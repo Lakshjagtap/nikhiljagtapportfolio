@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Jagtap - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/images/logonj.jpg" type="image/x-icon"> 
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <a href="#home" class="logo">NJ</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Container for Horizontal Scrolling -->
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="box">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li> <!-- Additional circles -->
+                <li></li>
+            </ul>
+            <div class="hero-content">
+                <h1>Hi, I'm <span id="dynamic-text">Nikhil</span></h1>
+                <p>I love to learn and develop scalable software.</p>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-content">
+                <div class="about-box">
+                    <h2 class="section-title">Introduction</h2>
+                    <p>Hello, I’m Nikhil Jagtap. I am a Computer Engineering student at ISB&M College of Engineering, Pune. 
+                        <a class="external-link" href="https://www.linkedin.com/in/nikhil-jagtap-721293257" target="_blank" rel="noopener noreferrer">Full Stack Developer</a> 
+                        specialized and certified in MEAN stacks 🚀. My technical skills include ReactJS, AngularJS, NodeJS, Java, and Python. 
+                        I’m passionate about building innovative web applications and continuously expanding my knowledge in the tech field.
+                    </p>
+                    <div class="resume">
+                        <a href="https://drive.google.com/file/d/1Cd5E3eKdXsvf-oJPbTPtGUX8qH3mIsZb/view?usp=drive_link" class="button">View Resume</a>
+                    </div>    
+                </div>    
+            </div>
+
+            <!-- Services Section -->
+            <div class="services">
+                <!-- Example Service Card -->
+                <div class="service-card">
+                    <img src="https://media.licdn.com/dms/image/C4D1BAQHx0KVi2CDeJQ/company-background_10000/0/1638257104256/techenthusiast_cover?e=2147483647&v=beta&t=aOxvH2cB6s08JbvT3dlAHPqpxP2oiHCMktID-AYskKE" alt="Service Icon">
+                    <h3>Technology Enthusiast</h3>
+                </div>
+                <div class="service-card">
+                    <img src="https://archive.nptel.ac.in/content/storage2/courses/107103002/images/nptel.jpg" alt="Service Icon">
+                    <h3>Programming in Java( NPTEL certified)</h3>
+                </div>
+                <div class="service-card">
+                    <img src="https://studysection.com/blog/wp-content/uploads/2019/07/Python-blog.png" alt="Service Icon">
+                    <h3>Python Enthusiast</h3>
+                </div>
+                <!-- Additional Service Cards can be added similarly -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-cards">
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        <a href="https://github.com/Lakshjagtap/hand-gesture-recognition" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/Project1.png" alt="Hand Gesture Recognition Project">
+                        </a>
+                        <div class="project-info">
+                            <h5>Hand Gesture Recognition</h5>
+                            <p>Hand gesture recognition involves detecting and interpreting human hand movements
+                                using computer vision and machine learning techniques. 
+                                Various tools were utilized, including OpenCV, MediaPipe, Python, and TensorFlow algorithms, to effectively implement this technology.</p>
+                            <div class="project-tags">
+                                <p>#OpenCV</p>
+                                <p>#TensorFlow</p>
+                                <p>#MediaPipe</p>
+                                <p>#Python</p>
+                            </div>
+                            <a href="https://github.com/Lakshjagtap/hand-gesture-recognition" class="button" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <a href="https://github.com/Lakshjagtap/portfolio" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/Project2.png" alt="Own Portfolio Project">
+                        </a>
+                        <div class="project-info">
+                            <h5>Own Portfolio</h5>
+                            <p>I’ve put together a portfolio showcasing my skills in HTML, CSS, and JSX, highlighting my ability to design and implement engaging web interfaces.</p>
+                            <div class="project-tags">
+                                <p>#React</p>
+                                <p>#Node.js</p>
+                                <p>#JavaScript</p>
+                                <p>#HTML</p>
+                            </div>
+                            <a href="https://github.com/Lakshjagtap/portfolio" class="button" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="experience-content">
+                <p>MY JOURNEY SO FAR.</p>
+                <h2>Work Experience And Certification</h2>
+            </div>
+            <div class="experience-timeline">
+                <!-- Example Experience Entry -->
+                <div class="experience-item">
+                    <div class="experience-info">
+                        <h3>ISB&M COE</h3>
+                        <p>PBL group Leader</p>
+                        <ul>
+                            <p>I led dynamic contributions to Hand Gesture Recognition projects, actively influencing and improving project outcomes.</p>
+                            <p>Developed multiple shared components to simplify tasks for fellow developers, boosting efficiency and teamwork.</p>
+                        </ul>
+                    </div>
+                    <div class="experience-logo">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="data:image/png;base64,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" alt="Company Logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- Repeat the above Experience Entry div for each experience -->
+                <div class="experience-item">
+                    <div class="experience-info">
+                        <h3>Programming in Java(NPTEL Certified)</h3>
+                        <p>Elite Student</p>
+                        <ul>
+                            <p>Completed NPTEL Programming in Java course successfully.Achieved an elite certificate with 61% score.</p>
+                            <p>Enhanced my Java programming skills significantly. Grateful for the comprehensive learning experience.</p>
+                        </ul>
+                    </div>
+                    <div class="experience-logo">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="https://archive.nptel.ac.in/content/storage2/courses/107103002/images/nptel.jpg" alt="Company Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Fill out the form below and we will get in touch with you shortly.</p>
+            </div>
+            <div class="contact-box">
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:jagtapnikhil2411@gmail.com" aria-label="Email Nikhil" class="social-icon email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/nikhil-jagtap-721293257/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Nikhil" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Lakshjagtap" target="_blank" rel="noopener noreferrer" aria-label="GitHub Nikhil" class="social-icon github"><i class="fab fa-github"></i></a>
+            <!-- Add more social links as needed -->
+        </div>
+        <p>&copy; 2024 Nikhil Jagtap. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

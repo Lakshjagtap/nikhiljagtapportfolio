@@ -1,0 +1,646 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    background: #000000;
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+}
+
+/* Header */
+header {
+    background-image:url('/images/Background.jpg');
+    color: #333;
+    padding: 1em 0;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for 3D effect */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-out;
+}
+
+header.scrolled {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.8em;
+    color: #ffffff;
+    text-decoration: bisque;
+    padding: 0.5em 0;
+    border-radius: 8px;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for 3D effect */
+    animation: fadeInLeft 1s ease-out;
+}
+
+header nav {
+    flex-grow: 1;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+header .nav-links li {
+    margin: 0;
+}
+
+header .nav-links li a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+header .nav-links li a:hover, 
+header .nav-links li a.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #1cdad0;
+}
+
+/* Mobile Menu */
+header .mobile-menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: #3498db;
+    background: none;
+}
+
+header .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #ffffff;
+    color: #333;
+    padding: 1em;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    animation: slideIn 0.3s ease-out;
+}
+
+header .mobile-menu.hidden {
+    transform: translateX(100%);
+}
+
+header .mobile-menu-close {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+header .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+header .mobile-menu ul li {
+    margin: 1em 0;
+}
+
+header .mobile-menu ul li a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+header .mobile-menu ul li a:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #3498db;
+}
+
+/* Full-height Sections */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: ensures the image covers the entire container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.box {
+    position: relative;
+    max-width: 900px; /* Adjust as needed */
+    width: 90%;
+    padding: 40px; /* Increase padding for more space */
+    background: rgba(255, 255, 255, 0.8); /* Light background for the box */
+    border-radius: 8px; /* Optional: for rounded corners */
+    text-align: center; /* Centering text inside the box */
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for 3D effect */
+    z-index: 1; /* Ensure box is above the circles and yellow circle */
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 3; /* Ensure content is above any other elements */
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: all;
+    z-index: 0; /* Ensure circles are below the box and content */
+}
+
+.circles li {
+    position: absolute;
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    background: rgba(8, 95, 84, 0.315);
+    border-radius: 50%;
+    animation: move 25s infinite linear;
+    z-index: 0; /* Ensure circles are below the box */
+}
+
+/* More circles */
+.circles li:nth-child(1) { width: 120px; height: 120px; animation-duration: 10s; }
+.circles li:nth-child(2) { width: 90px; height: 90px; animation-duration: 15s; }
+.circles li:nth-child(3) { width: 110px; height: 110px; animation-duration: 20s; }
+.circles li:nth-child(4) { width: 150px; height: 150px; animation-duration: 25s; }
+.circles li:nth-child(5) { width: 300px; height: 300px; animation-duration: 30s; }
+.circles li:nth-child(6) { width: 700px; height: 700px; animation-duration: 35s; }
+/* Add more custom styles for additional circles as needed */
+
+@keyframes move {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px));
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* About Section */
+.about {
+    background-image: url(/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: ensures the image covers the entire container */
+    animation: fadeInUp 1.5s ease-out;
+    position: relative; /* To position the box inside */
+    padding: 60px 20px; /* Add padding for better spacing */
+}
+
+.about-box {
+    max-width: 600px; /* Adjust width as needed */
+    width: 90%;
+    padding: 0.3em; /* Increase padding for more space */
+    background: rgba(255, 255, 255, 0.8); /* Light background for the box */
+    border-radius: 10px; /* Optional: for rounded corners */
+    text-align: center; /* Centering text inside the box */
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+    margin: 0 auto; /* Center horizontally */
+    z-index: 1; /* Ensure box is above the background */
+}
+
+/* Additional styles for the content inside the box */
+.about-box h2 {
+    font-size: 2em;
+    color: #0d3957;
+    margin-top: 0;
+}
+
+.about-box p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0.3em;
+    flex: 1 1 calc(33% - 1em);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 2s ease-out;
+}
+
+.service-card img {
+    max-width: 100px;
+    margin-bottom: 0.5em;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+.projects {
+    background-image: url(/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: ensures the image covers the entire container */
+    animation: fadeInUp 1.5s ease-out;
+    position: relative; /* To position the box inside */
+    padding: 60px 20px; /* Add padding for better spacing */
+}
+
+/* Project Cards Container */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em; /* Increased gap for better spacing between cards */
+    justify-content: center; /* Center the cards horizontally */
+}
+
+/* Individual Project Card */
+.project-card {
+    background: #ffffff;
+    border-radius: 15px; /* Increased border-radius for larger cards */
+    padding: 0.07em; /* Increased padding for larger cards */
+    flex: 1 1 calc(25% - 1.5em); /* Adjusted width for 4 cards per row */
+    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.2); /* Increased shadow for better emphasis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px; /* Increased max-width for the cards */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 20px; /* Match border-radius with card */
+    object-fit: cover; /* Ensure the image covers the card area */
+}
+
+/* Project Information */
+.project-info {
+    padding: 1em 0;
+}
+
+.project-info h5 {
+    margin: 0 0 0.5em;
+    font-size: 1em; /* Increased font size for better visibility */
+    color: #333; /* Dark color for the project title */
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em; /* Spacing between tags */
+    margin-bottom: 1em;
+}
+
+.project-tags p {
+    background: #209bac; /* Blue background for tags */
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 0.3em 0.6em; /* Increased padding for better readability */
+    font-size: 1em; /* Increased font size for better visibility */
+    margin: 0;
+}
+
+/* Hover Effect for Project Card */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for hover effect */
+}
+
+/* Button inside the project card */
+.project-info .button {
+    display: inline-block;
+    background-color: #209bac;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.project-info .button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Experience Section */
+.experience {
+    background-image: url(/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: ensures the image covers the entire container */
+    animation: fadeInUp 1.5s ease-out;
+    position: relative; /* To position the box inside */
+    padding: 60px 20px; /* Add padding for better spacing */
+    min-height: 80vh; /* Ensure it covers enough height */
+}
+
+/* Centering the heading */
+.experience-intro {
+    position: absolute;
+    top: 20px; /* Distance from top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    width: 100%; /* Full width for text alignment */
+}
+
+.experience-intro h2 {
+    font-size: 2.5em;
+    color: #333333;
+    margin: 10px 0;
+}
+
+/* Timeline Container */
+.experience-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em; /* Gap between items */
+    justify-content: space-between; /* Space items evenly */
+    margin-top: 80px; /* Space for the heading */
+}
+
+/* Experience Item */
+.experience-item {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 1em;
+    flex: 1 1 calc(45% - 2em); /* Two items per row with spacing */
+    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px; /* Adjust width as needed */
+    position: relative;
+}
+
+/* Alternating Layout */
+.experience-item-1 {
+    order: 1; /* First item in row */
+    background-color: #f9f9f9; /* Optional: Different background */
+}
+
+.experience-item-2 {
+    order: 2; /* Second item in row */
+    background-color: #ffffff; /* Optional: Different background */
+}
+
+.experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-item {
+        flex: 1 1 100%; /* Stack items vertically on small screens */
+    }
+}
+
+/* Contact Section */
+.contact {
+    background-image: url(/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: ensures the image covers the entire container */
+    animation: fadeInUp 1.5s ease-out;
+    position: relative; /* To position the box inside */
+    padding: 60px 20px; /* Add padding for better spacing */
+    min-height: 80vh; /* Ensure it covers enough height */
+    text-align: center;
+}
+
+.contact-content {
+    margin-bottom: 30px;
+}
+
+.contact-content h2 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    font-size: 1.1em;
+    color: #000000;
+}
+
+.contact-box {
+    background-color: #000000; /* White background */
+    border-radius: 20px;
+    padding: 4em;
+    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.form-group {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    background-color: #1f8ca7;
+    color: #ffffff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8941b3;
+}
+
+
+footer {
+    background-image: url(/images/Background.jpg);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f0f0f0;
+}
+
+.email {
+    font-size: 1.8rem; /* Adjust size as needed */
+}
+
+.linkedin {
+    font-size: 1.8rem; /* Adjust size as needed */
+}
+
+.github {
+    font-size: 1.8rem; /* Adjust size as needed */
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .about-content, .service-card, .project-card {
+        flex: 1 1 100%;
+    }
+
+    header .nav-links {
+        display: none;
+    }
+
+    header .mobile-menu-toggle {
+        display: block;
+    }
+}
