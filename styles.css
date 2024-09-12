@@ -9,10 +9,10 @@ body {
 
 /* Header */
 header {
-    background-image:url('images/Background.png');
+    background-image: url('images/Background.png');
     color: #333;
     padding: 1em 0;
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for 3D effect */
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,7 +43,7 @@ header .logo {
     text-decoration: bisque;
     padding: 0.5em 0;
     border-radius: 8px;
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for 3D effect */
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
     animation: fadeInLeft 1s ease-out;
 }
 
@@ -167,30 +167,27 @@ section {
     overflow: hidden;
     background-image: url('images/Background.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Optional: ensures the image covers the entire container */
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-
 .box {
     position: relative;
-    max-width: 900px; /* Adjust as needed */
+    max-width: 900px;
     width: 90%;
-    padding: 40px; /* Increase padding for more space */
-    background: rgba(255, 255, 255, 0.8); /* Light background for the box */
-    border-radius: 8px; /* Optional: for rounded corners */
-    text-align: center; /* Centering text inside the box */
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for 3D effect */
-    z-index: 1; /* Ensure box is above the circles and yellow circle */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
-
 
 .hero-content {
     position: relative;
-    z-index: 3; /* Ensure content is above any other elements */
+    z-index: 3;
 }
 
 .circles {
@@ -201,7 +198,7 @@ section {
     height: 100%;
     overflow: hidden;
     pointer-events: all;
-    z-index: 0; /* Ensure circles are below the box and content */
+    z-index: 0;
 }
 
 .circles li {
@@ -212,7 +209,7 @@ section {
     background: rgba(8, 95, 84, 0.315);
     border-radius: 50%;
     animation: move 25s infinite linear;
-    z-index: 0; /* Ensure circles are below the box */
+    z-index: 0;
 }
 
 /* More circles */
@@ -222,7 +219,6 @@ section {
 .circles li:nth-child(4) { width: 150px; height: 150px; animation-duration: 25s; }
 .circles li:nth-child(5) { width: 300px; height: 300px; animation-duration: 30s; }
 .circles li:nth-child(6) { width: 700px; height: 700px; animation-duration: 35s; }
-/* Add more custom styles for additional circles as needed */
 
 @keyframes move {
     0% {
@@ -232,7 +228,6 @@ section {
         transform: translateY(calc(100vh + 100px));
     }
 }
-
 
 @keyframes fadeIn {
     from {
@@ -289,25 +284,24 @@ section {
 .about {
     background-image: url('images/Background.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Optional: ensures the image covers the entire container */
+    background-size: cover;
     animation: fadeInUp 1.5s ease-out;
-    position: relative; /* To position the box inside */
-    padding: 60px 20px; /* Add padding for better spacing */
+    position: relative;
+    padding: 60px 20px;
 }
 
 .about-box {
-    max-width: 600px; /* Adjust width as needed */
+    max-width: 600px;
     width: 90%;
-    padding: 0.3em; /* Increase padding for more space */
-    background: rgba(255, 255, 255, 0.8); /* Light background for the box */
-    border-radius: 10px; /* Optional: for rounded corners */
-    text-align: center; /* Centering text inside the box */
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
-    margin: 0 auto; /* Center horizontally */
-    z-index: 1; /* Ensure box is above the background */
+    padding: 0.3em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    z-index: 1;
 }
 
-/* Additional styles for the content inside the box */
 .about-box h2 {
     font-size: 2em;
     color: #0d3957;
@@ -320,6 +314,7 @@ section {
     line-height: 1.6;
 }
 
+/* Services Section */
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -331,153 +326,151 @@ section {
     border-radius: 12px;
     padding: 0.3em;
     flex: 1 1 calc(33% - 1em);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 2s ease-out;
-}
-
-.service-card img {
-    max-width: 100px;
-    margin-bottom: 0.5em;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.3);
+}
+
+.service-card img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #333;
 }
 
 /* Projects Section */
 .projects {
     background-image: url('images/Background.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Optional: ensures the image covers the entire container */
-    animation: fadeInUp 1.5s ease-out;
-    position: relative; /* To position the box inside */
-    padding: 60px 20px; /* Add padding for better spacing */
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center; /* Center-align text */
+    color: #fff; /* Set text color to white for contrast */
 }
 
-/* Project Cards Container */
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px; /* Space between heading and project cards */
+    color: #ffffff;
+}
+
+/* Container for project cards */
 .project-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3em; /* Increased gap for better spacing between cards */
-    justify-content: center; /* Center the cards horizontally */
+    gap: 1em; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
 }
 
 /* Individual Project Card */
 .project-card {
-    background: #ffffff;
-    border-radius: 15px; /* Increased border-radius for larger cards */
-    padding: 0.07em; /* Increased padding for larger cards */
-    flex: 1 1 calc(25% - 1.5em); /* Adjusted width for 4 cards per row */
-    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.2); /* Increased shadow for better emphasis */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 1em;
+    flex: 1 1 calc(25% - 1em); /* Adjusted width for better use of space */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow for a lighter look */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    max-width: 350px; /* Increased max-width for the cards */
-    text-decoration: none; /* Remove underline from link */
-    color: inherit; /* Inherit text color from parent */
+    max-width: 300px; /* Fixed width for consistent sizing */
+    margin: 10px; /* Margin for spacing around each card */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .project-card img {
-    width: 100%;
-    border-radius: 20px; /* Match border-radius with card */
-    object-fit: cover; /* Ensure the image covers the card area */
+    width: 100%; /* Ensure image fits the card width */
+    border-radius: 8px; /* Slightly smaller radius for image */
 }
 
-/* Project Information */
-.project-info {
-    padding: 1em 0;
+.project-card h3 {
+    font-size: 1.2em; /* Slightly smaller font size */
+    margin-top: 10px;
 }
 
-.project-info h5 {
-    margin: 0 0 0.5em;
-    font-size: 1em; /* Increased font size for better visibility */
-    color: #333; /* Dark color for the project title */
+.project-card p {
+    font-size: 0.9em; /* Slightly smaller font size for description */
+    color: #333;
 }
 
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em; /* Spacing between tags */
-    margin-bottom: 1em;
+/* Responsive Design */
+
+/* Tablets and Smaller Desktops */
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(33% - 1em); /* Three cards per row on tablets and small desktops */
+    }
 }
 
-.project-tags p {
-    background: #209bac; /* Blue background for tags */
-    color: #ffffff;
-    border-radius: 3px;
-    padding: 0.3em 0.6em; /* Increased padding for better readability */
-    font-size: 1em; /* Increased font size for better visibility */
-    margin: 0;
+/* Medium Screens (Portrait Tablets and Large Phones) */
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(50% - 1em); /* Two cards per row on medium screens */
+    }
 }
 
-/* Hover Effect for Project Card */
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for hover effect */
+/* Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    .project-card {
+        flex: 1 1 calc(100% - 1em); /* One card per row on small screens */
+    }
 }
-
-/* Button inside the project card */
-.project-info .button {
-    display: inline-block;
-    background-color: #209bac;
-    color: #ffffff;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.project-info .button:hover {
-    background-color: #2980b9;
-}
-
 
 /* Experience Section */
 .experience {
-    background-image: url('images/Background.png');
+    background-image: url('images/Background.png'); /* Custom background image */
     background-repeat: no-repeat;
-    background-size: cover; /* Optional: ensures the image covers the entire container */
+    background-size: cover; /* Ensure the image covers the entire container */
     animation: fadeInUp 1.5s ease-out;
     position: relative; /* To position the box inside */
-    padding: 60px 20px; /* Add padding for better spacing */
+    padding: 80px 20px; /* Add padding for better spacing */
     min-height: 80vh; /* Ensure it covers enough height */
+    color: #fff; /* Set text color to white for contrast */
+    text-align: center;
 }
 
-/* Centering the heading */
 .experience-intro {
-    position: absolute;
-    top: 20px; /* Distance from top */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    text-align: center;
-    width: 100%; /* Full width for text alignment */
+    margin-bottom: 40px; /* Space between intro and timeline */
 }
 
 .experience-intro h2 {
     font-size: 2.5em;
-    color: #333333;
-    margin: 10px 0;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
 }
 
-/* Timeline Container */
 .experience-timeline {
     display: flex;
     flex-wrap: wrap;
     gap: 2em; /* Gap between items */
-    justify-content: space-between; /* Space items evenly */
-    margin-top: 80px; /* Space for the heading */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 40px; /* Space for the heading */
 }
 
 /* Experience Item */
 .experience-item {
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 1em;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 1.5em; /* Increased padding for better spacing */
     flex: 1 1 calc(45% - 2em); /* Two items per row with spacing */
-    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Soft shadow for emphasis */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     align-items: center;
@@ -486,26 +479,36 @@ section {
     position: relative;
 }
 
-/* Alternating Layout */
-.experience-item-1 {
-    order: 1; /* First item in row */
-    background-color: #f9f9f9; /* Optional: Different background */
+.experience-item:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.9); /* Alternating background for odd items */
 }
 
-.experience-item-2 {
-    order: 2; /* Second item in row */
-    background-color: #ffffff; /* Optional: Different background */
+.experience-item:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.85); /* Alternating background for even items */
 }
 
 .experience-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.experience-item h3 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.experience-item p {
+    font-size: 1em;
+    margin: 0.5em 0 0;
+    color: #666;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .experience-item {
         flex: 1 1 100%; /* Stack items vertically on small screens */
+        max-width: 100%; /* Ensure full width on small screens */
     }
 }
 
@@ -513,68 +516,96 @@ section {
 .contact {
     background-image: url('images/Background.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Optional: ensures the image covers the entire container */
+    background-size: cover;
     animation: fadeInUp 1.5s ease-out;
-    position: relative; /* To position the box inside */
-    padding: 60px 20px; /* Add padding for better spacing */
-    min-height: 80vh; /* Ensure it covers enough height */
+    position: relative;
+    padding: 60px 20px;
+    min-height: 80vh;
     text-align: center;
 }
 
+/* Contact Content Box */
 .contact-content {
-    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Ensure it stays above other content */
 }
 
+/* Contact Content Heading */
 .contact-content h2 {
     font-size: 2.5em;
     color: #000000;
     margin-bottom: 10px;
 }
 
+/* Contact Content Paragraph */
 .contact-content p {
     font-size: 1.1em;
     color: #000000;
 }
 
+/* Contact Box with 3D Effect */
 .contact-box {
-    background-color: #000000; /* White background */
+    background-color: #000000;
     border-radius: 20px;
-    padding: 4em;
-    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 0 auto; /* Center horizontally */
+    padding: 3.5em;
+    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: perspective(1000px);
 }
 
+/* Form Group */
 .form-group {
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 1em;
     text-align: left;
+    position: relative;
+    z-index: 1;
 }
 
+/* Form Group Label */
 .form-group label {
     display: block;
-    margin-bottom: 0em;
+    margin-bottom: 0.5em;
     font-weight: bold;
     color: #ffffff;
 }
 
+/* Form Inputs and Textarea */
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 0.8em;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
-    transition: border-color 0.3s ease;
+    background: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .form-group textarea {
     resize: vertical;
 }
 
+/* Focused Form Inputs and Textarea */
 .form-group input:focus, .form-group textarea:focus {
     border-color: #3498db;
     outline: none;
 }
 
+/* Button */
 button {
     background-color: #1f8ca7;
     color: #ffffff;
@@ -583,64 +614,200 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
     background-color: #8941b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* 3D Effect for Form Inputs and Textarea on Hover */
+.form-group input:hover, .form-group textarea:hover {
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-content h2 {
+        font-size: 2em;
+    }
+
+    .contact-content p {
+        font-size: 1em;
+    }
+
+    .contact-box {
+        padding: 1.5em;
+        max-width: 90%;
+    }
+
+    .form-group {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-content h2 {
+        font-size: 1.8em;
+    }
+
+    .contact-content p {
+        font-size: 0.9em;
+    }
+
+    .contact-box {
+        padding: 1em;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 0.6em;
+    }
+
+    button {
+        padding: 0.6em 1em;
+    }
 }
 
 
+
+/* Footer */
 footer {
-    background-image: url('images/Background.png');
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1em 0;
     text-align: center;
-    padding: 1rem;
 }
 
-.social-links {
-    margin-bottom: 1rem;
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
-.social-icon {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    text-decoration: none;
+footer .social-icon {
+    color: #ffffff;
+    font-size: 1.5em;
     transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-    color: #f0f0f0;
+footer .social-icon:hover {
+    color: #3498db;
 }
 
-.email {
-    font-size: 1.8rem; /* Adjust size as needed */
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero-content {
+        font-size: 1em;
+    }
+
+    .about-box {
+        width: 95%;
+    }
+
+    .service-card, .project-card {
+        flex: 1 1 calc(50% - 1em);
+    }
 }
 
-.linkedin {
-    font-size: 1.8rem; /* Adjust size as needed */
-}
-
-.github {
-    font-size: 1.8rem; /* Adjust size as needed */
-}
-
-/* Utility classes */
-.hidden {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .about-content, .service-card, .project-card {
+@media (max-width: 992px) {
+    .services .service-card, .projects .project-card {
         flex: 1 1 100%;
     }
 
+    .about-box h2 {
+        font-size: 1.5em;
+    }
+
+    .about-box p {
+        font-size: 1em;
+    }
+
+    .project-card h3 {
+        font-size: 1.3em;
+    }
+
+    .contact-content h2 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 768px) {
     header .nav-links {
         display: none;
     }
 
     header .mobile-menu-toggle {
         display: block;
+    }
+
+    header .mobile-menu {
+        display: block;
+    }
+
+    header .mobile-menu.hidden {
+        display: none;
+    }
+
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .service-card, .project-card {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .about-box h2, .contact-content h2 {
+        font-size: 1.8em;
+    }
+
+    .about-box p, .contact-content p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 1em;
+    }
+
+    footer .social-links {
+        flex-direction: column;
+    }
+
+    footer .social-icon {
+        margin: 0.5em 0;
+    }
+}
+
+@media (max-width: 576px) {
+    header .mobile-menu {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header .mobile-menu-close {
+        font-size: 1.5em;
+    }
+
+    .hero-content {
+        font-size: 0.9em;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .about-box, .contact-content {
+        padding: 1em;
     }
 }
